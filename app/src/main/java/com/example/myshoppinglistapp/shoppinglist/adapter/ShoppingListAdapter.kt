@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myshoppinglistapp.R
 import com.example.myshoppinglistapp.shoppinglist.model.ShoppingList
 
-class ShoppingListAdapter(private val shoppingLists: List<ShoppingList>) :
+class ShoppingListAdapter(
+    private val shoppingLists: List<ShoppingList>,
+    private val listener : (ShoppingList) -> Unit
+) :
     RecyclerView.Adapter<ShoppingRecyclerViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingRecyclerViewHolder {
@@ -19,6 +22,8 @@ class ShoppingListAdapter(private val shoppingLists: List<ShoppingList>) :
     override fun getItemCount(): Int = shoppingLists.size
 
     override fun onBindViewHolder(holder: ShoppingRecyclerViewHolder, position: Int) {
-        (holder.itemView as TextView).text = shoppingLists[position].name
+        val item = shoppingLists[position]
+        (holder.itemView as TextView).text = item.name
+        holder.itemView.setOnClickListener { listener(item)}
     }
 }
