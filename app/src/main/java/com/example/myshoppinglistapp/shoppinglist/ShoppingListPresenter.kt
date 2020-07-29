@@ -1,11 +1,10 @@
 package com.example.myshoppinglistapp.shoppinglist
 
+import com.example.myshoppinglistapp.shoppingListDetails.ShoppingListDetailsContract
 import com.example.myshoppinglistapp.shoppinglist.data.localSource.ShoppingListLocalSource
-import com.example.myshoppinglistapp.shoppinglist.ShoppingListContract
-import com.example.myshoppinglistapp.shoppinglist.model.ShoppingList
 
-class ShoppingListPresenter (
-    private val viewInterface: ShoppingListContract.ViewInterface
+class ShoppingListPresenter(
+    private val viewInterface: ShoppingListActivity
 ) : ShoppingListContract.PresenterInterface {
 
     override fun getShoppingLists() {
