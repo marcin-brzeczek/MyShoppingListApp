@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.shoppinglist.adapter
+package com.example.myshoppinglistapp.presentation.shoppingList.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
