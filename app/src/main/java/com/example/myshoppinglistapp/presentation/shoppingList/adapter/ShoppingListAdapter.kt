@@ -1,11 +1,11 @@
-package com.example.myshoppinglistapp.shoppinglist.adapter
+package com.example.myshoppinglistapp.presentation.shoppingList.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myshoppinglistapp.R
-import com.example.myshoppinglistapp.shoppinglist.model.ShoppingList
+import com.example.myshoppinglistapp.data.model.ShoppingList
 
 class ShoppingListAdapter(
     private val shoppingLists: List<ShoppingList>,
