@@ -11,4 +11,5 @@ data class ShoppingList(
     val name: String,
     val date: Date,
     val archived: Boolean
+
 )
