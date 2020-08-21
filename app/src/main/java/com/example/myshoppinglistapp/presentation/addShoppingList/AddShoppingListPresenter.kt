@@ -20,7 +20,7 @@ class AddShoppingListPresenter @Inject constructor(
                 .observeOn(scheduler.ui())
                 .subscribeBy(
                     onComplete = { finish() },
-                    onError = { Log.e("ERROR_GET_SHOPPING_LIST", "Erorr fetchinh shopping lists", it) }
+                    onError = { Log.e("ERROR_ADD_SHOPPING_LIST", "Error adding shopping lists", it) }
                 ).addToDisposables()
         }
     }

@@ -1,6 +1,6 @@
 package com.example.myshoppinglistapp.di
 
-import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListAcitivty
+
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListActivity
 import com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListActivity
 import dagger.Module

@@ -38,9 +38,9 @@ class ShoppingListActivity : BaseActivity(), ShoppingListContract.ViewInterface 
             adapter = shoppingListAdapter
             layoutManager = LinearLayoutManager(this@ShoppingListActivity)
         }
-    }
 
-    override fun addNewShoppingList() {
-       startActivity(Intent(this, AddShoppingListAcitivty::class.java))
+        override fun addNewShoppingList() {
+            startActivity(Intent(this, AddShoppingListAcitivty::class.java))
+        }
     }
 }

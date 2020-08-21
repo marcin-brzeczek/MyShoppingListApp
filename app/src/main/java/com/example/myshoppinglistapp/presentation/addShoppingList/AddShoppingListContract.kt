@@ -9,7 +9,7 @@ class AddShoppingListContract {
 
     interface AddViewInterface {
         fun displayShoppingLists(shoppingList: List<ShoppingList>)
-        fun addNewShoppingList()
+        fun addNewAddShoppingList()
 
     }
 }
