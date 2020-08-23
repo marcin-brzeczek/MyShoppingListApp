@@ -11,7 +11,7 @@ import io.reactivex.Observable
 interface ShoppingListDao {
 
     @Query("select * from shoppingLists where archived =:archived order by date desc")
-    fun getAllCurrentOrderByDate(archived: Boolean = false): Observable<List<ShoppingList>>
+    fun getAllCurrentOrderByDate(archived: Boolean): Observable<List<ShoppingList>>
 
     @Insert
     fun add(shoppingList: ShoppingList) : Completable

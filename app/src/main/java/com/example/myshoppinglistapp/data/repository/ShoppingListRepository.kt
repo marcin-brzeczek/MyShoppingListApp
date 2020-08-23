@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 class ShoppingListRepository @Inject constructor(val shoppingListDao: ShoppingListDao) {
 
-    fun getAllOrderedByDate() = shoppingListDao.getAllCurrentOrderByDate()
+    fun getAllOrderedByDate(archived: Boolean) = shoppingListDao.getAllCurrentOrderByDate(archived)
 
     fun add(shoppingList: ShoppingList) = shoppingListDao.add(shoppingList)
 }
