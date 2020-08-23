@@ -14,7 +14,7 @@ class ShoppingListPresenter @Inject constructor(
 ) : BasePresenter<ShoppingListContract.ViewInterface>(viewInterface) , ShoppingListContract.PresenterInterface {
 
     override fun getShoppingLists() {
-        shoppingListRepository.getAllOrderedByDate()
+        shoppingListRepository.getAllOrderedByDate(archived = true)
             .subscribeOn(scheduler.io())
             .observeOn(scheduler.ui())
             .subscribeBy(

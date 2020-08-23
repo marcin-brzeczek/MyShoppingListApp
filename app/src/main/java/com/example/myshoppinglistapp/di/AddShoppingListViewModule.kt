@@ -1,6 +1,6 @@
 package com.example.myshoppinglistapp.di
 
-import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListAcitivty
+import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListActivity
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListContract
 import dagger.Binds
 import dagger.Module
@@ -9,5 +9,5 @@ import dagger.Module
 abstract class AddShoppingListViewModule {
     
     @Binds
-    abstract fun provideAddShoppingListView(shoppingAddListActivity: AddShoppingListAcitivty): AddShoppingListContract.AddViewInterface
+    abstract fun provideAddShoppingListView(shoppingAddListActivity: AddShoppingListActivity): AddShoppingListContract.AddViewInterface
 }

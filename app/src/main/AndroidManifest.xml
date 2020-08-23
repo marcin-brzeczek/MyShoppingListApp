@@ -10,13 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListActivity">
+        <activity android:name=".presentation.menu.MenuActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.addShoppingList.AddShoppingListAcitivty" />
+        <activity android:name="com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListActivity"/>
+        <activity android:name=".presentation.addShoppingList.AddShoppingListActivity" />
     </application>
 
 </manifest>

@@ -12,9 +12,7 @@ abstract class ActivityInjectorsModule {
     @ContributesAndroidInjector(modules = [ShoppingListPresenterModule::class, ShoppingListViewModule::class])
     abstract fun provideShoppingListActivity(): ShoppingListActivity
 
-    @ContributesAndroidInjector()
+    @ContributesAndroidInjector(modules = [AddShoppingListPresenterModule::class, AddShoppingListViewModule::class])
     abstract fun provideAddShoppingListActivity(): AddShoppingListActivity
 
-    @ContributesAndroidInjector(modules = [AddShoppingListPresenterModule::class, AddShoppingListViewModule::class])
-    abstract fun providesAddShoppingListPresenter(): ShoppingListActivity
 }

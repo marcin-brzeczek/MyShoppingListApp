@@ -3,12 +3,12 @@ package com.example.myshoppinglistapp.di
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListContract
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListPresenter
-import com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListContract
-import com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListPresenter
 import com.example.myshoppinglistapp.utils.SchedulerProvider
+import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
+@Module
 class AddShoppingListPresenterModule {
 
     @Singleton

@@ -6,6 +6,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myshoppinglistapp.R
 import com.example.myshoppinglistapp.data.model.ShoppingList
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ShoppingListAdapter(
     private val shoppingLists: List<ShoppingList>,
@@ -23,7 +25,9 @@ class ShoppingListAdapter(
 
     override fun onBindViewHolder(holder: ShoppingRecyclerViewHolder, position: Int) {
         val item = shoppingLists[position]
-        (holder.itemView as TextView).text = item.name
+        (holder.itemView).findViewById<TextView>(R.id.name).text = item.name
+        val dateFormater = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        (holder.itemView).findViewById<TextView>(R.id.date).text = dateFormater.format(item.date)
         holder.itemView.setOnClickListener { listener(item)}
     }
 }

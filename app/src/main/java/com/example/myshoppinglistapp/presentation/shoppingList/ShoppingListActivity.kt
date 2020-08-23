@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myshoppinglistapp.R
 import com.example.myshoppinglistapp.data.model.ShoppingList
 import com.example.myshoppinglistapp.presentation.BaseActivity
-import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListAcitivty
+import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListActivity
 import com.example.myshoppinglistapp.presentation.shoppingList.adapter.ShoppingListAdapter
 import kotlinx.android.synthetic.main.activity_shopping_list.*
 import javax.inject.Inject
@@ -38,9 +38,9 @@ class ShoppingListActivity : BaseActivity(), ShoppingListContract.ViewInterface 
             adapter = shoppingListAdapter
             layoutManager = LinearLayoutManager(this@ShoppingListActivity)
         }
+    }
 
-        override fun addNewShoppingList() {
-            startActivity(Intent(this, AddShoppingListAcitivty::class.java))
-        }
+    override fun addNewShoppingList() {
+        startActivity(Intent(this, AddShoppingListActivity::class.java))
     }
 }
