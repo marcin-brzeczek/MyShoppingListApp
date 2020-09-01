@@ -6,7 +6,7 @@ import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
 import com.example.myshoppinglistapp.presentation.BasePresenter
 import com.example.myshoppinglistapp.utils.SchedulerProvider
 import io.reactivex.rxkotlin.subscribeBy
-import java.util.*
+import java.time.LocalDate
 import javax.inject.Inject
 
 class AddShoppingListPresenter @Inject constructor(
@@ -17,13 +17,13 @@ class AddShoppingListPresenter @Inject constructor(
     AddShoppingListContract.AddPresenterInterface {
 
     override fun addShoppingList(shoppingListName: String) {
-        val shoppingList = ShoppingList(name = shoppingListName, archived = false, date = Date())
+        val shoppingList = ShoppingList(name = shoppingListName, archived = false, date = LocalDate.now())
         shoppingListRepository.add(shoppingList)
             .subscribeOn(scheduler.io())
             .observeOn(scheduler.ui())
             .subscribeBy(
                 onComplete = { view.navigateToShoppingLists() },
-                onError = { Log.e("ERROR_ADD_SHOPPING_LIST", "Error adding shopping lists", it) }
+                onError = { Log.e("ERROR_ADD_SHOPPING_LIST", "Error adding shoppidang lists", it) }
             ).addToDisposables()
     }
 }

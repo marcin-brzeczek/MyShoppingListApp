@@ -1,17 +1,13 @@
 package com.example.myshoppinglistapp.data.db
 
 import androidx.room.TypeConverter
-import java.util.*
+import java.time.LocalDate
 
 class RoomTypeConverters {
 
     @TypeConverter
-    fun fromTimestamp(value: Long?): Date? {
-        return value?.let { Date(it) }
-    }
+    fun fromEpochDays(value: Long?): LocalDate? = value?.let { LocalDate.ofEpochDay(it) }
 
     @TypeConverter
-    fun dateToTimestamp(value: Date?): Long? {
-        return value?.time
-    }
+    fun dateToEpochDays(date: LocalDate?): Long? = date?.toEpochDay()
 }

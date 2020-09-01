@@ -14,12 +14,12 @@ class ShoppingListPresenter @Inject constructor(
 ) : BasePresenter<ShoppingListContract.ViewInterface>(viewInterface) , ShoppingListContract.PresenterInterface {
 
     override fun getShoppingLists() {
-        shoppingListRepository.getAllOrderedByDate(archived = true)
+        shoppingListRepository.getAllOrderedByDate(archived = false)
             .subscribeOn(scheduler.io())
             .observeOn(scheduler.ui())
             .subscribeBy(
                 onNext = { viewInterface.displayShoppingLists(it) },
-                onError = { Log.e("ERROR_GET_SHOPPING_LIST", "Erorr fetchinh shopping lists", it) }
+                onError = { Log.e("ERROR_GET_SHOPPING_LIST", "Error fetching shopping lists", it) }
             ).addToDisposables()
     }
 }
