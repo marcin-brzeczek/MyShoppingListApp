@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.presentation.shoppingList
+package com.example.myshoppinglistapp.presentation.current
 
 import android.util.Log
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
@@ -7,11 +7,11 @@ import com.example.myshoppinglistapp.utils.SchedulerProvider
 import io.reactivex.rxkotlin.subscribeBy
 import javax.inject.Inject
 
-class ShoppingListPresenter @Inject constructor(
+class CurrentListPresenter @Inject constructor(
     private val shoppingListRepository: ShoppingListRepository,
     private val scheduler: SchedulerProvider,
-    private val viewInterface: ShoppingListContract.ViewInterface
-) : BasePresenter<ShoppingListContract.ViewInterface>(viewInterface) , ShoppingListContract.PresenterInterface {
+    private val viewInterface: CurrentListContract.ViewInterface
+) : BasePresenter<CurrentListContract.ViewInterface>(viewInterface) , CurrentListContract.PresenterInterface {
 
     override fun getShoppingLists() {
         shoppingListRepository.getAllOrderedByDate(archived = false)

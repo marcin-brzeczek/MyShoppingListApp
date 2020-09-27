@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.presentation.shoppingList
+package com.example.myshoppinglistapp.presentation.shoppingListStale
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,14 +7,16 @@ import com.example.myshoppinglistapp.R
 import com.example.myshoppinglistapp.data.model.ShoppingList
 import com.example.myshoppinglistapp.presentation.BaseActivity
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListActivity
-import com.example.myshoppinglistapp.presentation.shoppingList.adapter.ShoppingListAdapter
+import com.example.myshoppinglistapp.presentation.current.CurrentListContract
+import com.example.myshoppinglistapp.presentation.current.CurrentListPresenter
+import com.example.myshoppinglistapp.presentation.current.adapter.ShoppingListAdapter
 import kotlinx.android.synthetic.main.activity_shopping_list.*
 import javax.inject.Inject
 
-class ShoppingListActivity : BaseActivity(), ShoppingListContract.ViewInterface {
+class ShoppingListActivity : BaseActivity(), CurrentListContract.ViewInterface {
 
     @Inject
-    lateinit var shoppingListPresenter: ShoppingListPresenter
+    lateinit var currentListPresenter: CurrentListPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,13 +25,13 @@ class ShoppingListActivity : BaseActivity(), ShoppingListContract.ViewInterface 
 
     override fun onStart() {
         super.onStart()
-        shoppingListPresenter.getShoppingLists()
+        currentListPresenter.getShoppingLists()
         addFab.setOnClickListener { addNewShoppingList() }
     }
 
     override fun onStop() {
         super.onStop()
-        shoppingListPresenter.stop()
+        currentListPresenter.stop()
     }
 
     override fun displayShoppingLists(shoppingLists: List<ShoppingList>) {

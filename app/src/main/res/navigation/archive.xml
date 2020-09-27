@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/archivedList"
-        android:name="com.example.myshoppinglistapp.presentation.menu.ArchiveFragment"
+        android:name="com.example.myshoppinglistapp.presentation.archive.ArchiveFragment"
         android:label="Archived"
         tools:layout="@layout/fragment_archive"/>
 

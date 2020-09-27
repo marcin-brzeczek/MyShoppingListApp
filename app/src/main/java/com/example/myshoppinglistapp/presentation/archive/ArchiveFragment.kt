@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.presentation.menu
+package com.example.myshoppinglistapp.presentation.archive
 
 import android.os.Bundle
 import android.view.LayoutInflater

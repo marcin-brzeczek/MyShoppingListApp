@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.di
+package com.example.myshoppinglistapp.di.current
 
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
 import com.example.myshoppinglistapp.presentation.current.CurrentListContract
@@ -9,12 +9,12 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class ShoppingListPresenterModule {
+class CurrentListPresenterModule {
 
     @Singleton
     @Provides
-    fun providesShoppingListPresenter(
-        scheduler:SchedulerProvider,
+    fun providesCurrentListPresenter(
+        scheduler: SchedulerProvider,
         shoppingListRepository: ShoppingListRepository,
         view: CurrentListContract.ViewInterface
     ): CurrentListContract.PresenterInterface =
