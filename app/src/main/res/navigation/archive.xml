@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/archive"
+    app:startDestination="@+id/archivedList">
+
+    <fragment
+        android:id="@+id/archivedList"
+        android:name="com.example.myshoppinglistapp.presentation.menu.ArchiveFragment"
+        android:label="Archived"
+        tools:layout="@layout/fragment_archive"/>
+
+</navigation>

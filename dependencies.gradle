@@ -15,6 +15,7 @@ versions.rx_android = "2.1.1"
 versions.rxjava2 = "2.2.12"
 versions.rxkotlin = "2.4.0"
 versions.material = "1.0.0"
+versions.navigation = "2.1.0"
 
 ext.versions = versions
 
@@ -34,6 +35,17 @@ dagger.android_support = "com.google.dagger:dagger-android-support:$versions.dag
 dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
 dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
 deps.dagger = dagger
+
+def navigation = [:]
+navigation.runtime = "androidx.navigation:navigation-runtime:$versions.navigation"
+navigation.runtime_ktx = "androidx.navigation:navigation-runtime-ktx:$versions.navigation"
+navigation.fragment = "androidx.navigation:navigation-fragment:$versions.navigation"
+navigation.fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+navigation.testing = "androidx.navigation:navigation-testing:$versions.navigation"
+navigation.ui = "androidx.navigation:navigation-ui:$versions.navigation"
+navigation.ui_ktx = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+navigation.safe_args_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigation"
+deps.navigation = navigation
 
 deps.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
 deps.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"

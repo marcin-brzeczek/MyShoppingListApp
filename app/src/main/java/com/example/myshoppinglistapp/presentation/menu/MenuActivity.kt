@@ -1,29 +1,48 @@
 package com.example.myshoppinglistapp.presentation.menu
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
+import androidx.navigation.NavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.myshoppinglistapp.R
-import com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchiveShoppingList.ArchiveShoppingListActivity
-import com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchivedShoppingListActivity
-import com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListActivity
+import com.example.myshoppinglistapp.utils.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_menu.*
 
-class MenuActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class MenuActivity : AppCompatActivity() {
+
+    private var currentNavController: LiveData<NavController>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
-        bottom_navigation.setOnNavigationItemSelectedListener(this)
+        if (savedInstanceState == null)
+            setupNavigation()
     }
 
-    override fun onNavigationItemSelected(menuItem: MenuItem): Boolean {
-        when (menuItem.itemId) {
-            R.id.current -> startActivity(Intent(this, ShoppingListActivity::class.java))
-            R.id.archive -> startActivity(Intent(this, ArchiveShoppingListActivity::class.java))
-        }
-        return true
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+        setupNavigation()
+    }
+
+    private fun setupNavigation() {
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        val tabIds = listOf(R.navigation.current, R.navigation.archive)
+        val controller = bottomNavigationView.setupWithNavController(
+            navGraphIds = tabIds,
+            fragmentManager = supportFragmentManager,
+            containerId = R.id.nav_host_container,
+            intent = intent
+        )
+
+        controller.observe(this, Observer { navigationController ->
+            setupActionBarWithNavController(navigationController)
+        })
+        currentNavController = controller
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return currentNavController?.value?.navigateUp() ?: false
     }
 }
