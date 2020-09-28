@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.presentation.shoppingList.adapter
+package com.example.myshoppinglistapp.presentation.current.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,9 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myshoppinglistapp.R
 import com.example.myshoppinglistapp.data.model.ShoppingList
-import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
-import java.util.*
 
 class ShoppingListAdapter(
     private val shoppingLists: List<ShoppingList>,
@@ -23,6 +21,8 @@ class ShoppingListAdapter(
     }
 
     override fun getItemCount(): Int = shoppingLists.size
+
+    fun getAdapterItem(position: Int) = shoppingLists.getOrNull(position)
 
     override fun onBindViewHolder(holder: ShoppingRecyclerViewHolder, position: Int) {
         val item = shoppingLists[position]

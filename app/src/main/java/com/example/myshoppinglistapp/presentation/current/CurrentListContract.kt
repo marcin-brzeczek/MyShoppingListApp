@@ -1,8 +1,8 @@
-package com.example.myshoppinglistapp.presentation.shoppingList
+package com.example.myshoppinglistapp.presentation.current
 
 import com.example.myshoppinglistapp.data.model.ShoppingList
 
-class ShoppingListContract {
+class CurrentListContract {
     interface PresenterInterface {
         fun getShoppingLists()
     }

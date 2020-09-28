@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListActivity"/>
+        <activity android:name="com.example.myshoppinglistapp.presentation.shoppingListStale.ShoppingListActivity"/>
         <activity android:name=".presentation.addShoppingList.AddShoppingListActivity" />
         <activity android:name=".presentation.archivedShoppingList.ArchivedShoppingListActivity" />
         <activity android:name=".presentation.archivedShoppingList.ArchiveShoppingList.ArchiveShoppingListActivity" />

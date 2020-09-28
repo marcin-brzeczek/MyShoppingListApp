@@ -8,8 +8,18 @@
 
     <fragment
         android:id="@+id/currentList"
-        android:name="com.example.myshoppinglistapp.presentation.menu.CurrentFragment"
+        android:name="com.example.myshoppinglistapp.presentation.current.CurrentListFragment"
         android:label="Current"
-        tools:layout="@layout/fragment_current"/>
+        tools:layout="@layout/fragment_current">
+        <action
+            android:id="@+id/action_add_shopping_list"
+            app:destination="@id/addShoppingList" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addShoppingList"
+        android:name="com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListFragment"
+        android:label="Add shopping list"
+        tools:layout="@layout/fragment_add_shopping_list"/>
 
 </navigation>

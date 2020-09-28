@@ -4,7 +4,7 @@ package com.example.myshoppinglistapp.di
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListActivity
 import com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchiveShoppingList.ArchiveShoppingListActivity
 import com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchivedShoppingListActivity
-import com.example.myshoppinglistapp.presentation.shoppingList.ShoppingListActivity
+import com.example.myshoppinglistapp.presentation.shoppingListStale.ShoppingListActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
