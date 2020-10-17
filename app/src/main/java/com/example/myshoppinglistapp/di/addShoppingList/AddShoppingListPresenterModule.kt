@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.di
+package com.example.myshoppinglistapp.di.addShoppingList
 
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListContract

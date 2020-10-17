@@ -2,7 +2,7 @@ package com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchiveS
 
 import android.util.Log
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
-import com.example.myshoppinglistapp.presentation.BasePresenter
+import com.example.myshoppinglistapp.presentation.base.BasePresenter
 import com.example.myshoppinglistapp.utils.SchedulerProvider
 import io.reactivex.rxkotlin.subscribeBy
 import javax.inject.Inject

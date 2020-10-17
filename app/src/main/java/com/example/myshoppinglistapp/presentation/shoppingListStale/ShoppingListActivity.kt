@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myshoppinglistapp.R
 import com.example.myshoppinglistapp.data.model.ShoppingList
-import com.example.myshoppinglistapp.presentation.BaseActivity
+import com.example.myshoppinglistapp.presentation.base.BaseActivity
 import com.example.myshoppinglistapp.presentation.addShoppingList.AddShoppingListActivity
 import com.example.myshoppinglistapp.presentation.current.CurrentListContract
 import com.example.myshoppinglistapp.presentation.current.CurrentListPresenter

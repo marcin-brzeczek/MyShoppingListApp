@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.di
+package com.example.myshoppinglistapp.di.injectors
 
 import com.example.myshoppinglistapp.di.current.CurrentListPresenterModule
 import com.example.myshoppinglistapp.di.current.CurrentListViewModule

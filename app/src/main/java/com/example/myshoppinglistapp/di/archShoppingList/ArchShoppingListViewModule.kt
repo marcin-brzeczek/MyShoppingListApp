@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.di
+package com.example.myshoppinglistapp.di.archShoppingList
 
 import com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchiveShoppingList.ArchiveShoppingListActivity
 import com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchiveShoppingList.ArchiveShoppingListContract
