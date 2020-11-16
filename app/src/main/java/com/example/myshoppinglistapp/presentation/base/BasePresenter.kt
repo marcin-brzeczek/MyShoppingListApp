@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.presentation
+package com.example.myshoppinglistapp.presentation.base
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable

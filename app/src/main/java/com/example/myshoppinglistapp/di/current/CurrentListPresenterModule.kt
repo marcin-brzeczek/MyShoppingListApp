@@ -1,5 +1,6 @@
 package com.example.myshoppinglistapp.di.current
 
+import com.example.myshoppinglistapp.data.repository.ShoppingItemRepository
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
 import com.example.myshoppinglistapp.presentation.current.CurrentListContract
 import com.example.myshoppinglistapp.presentation.current.CurrentListPresenter

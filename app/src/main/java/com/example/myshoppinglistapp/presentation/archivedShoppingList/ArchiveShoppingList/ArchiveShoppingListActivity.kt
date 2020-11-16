@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myshoppinglistapp.R
 import com.example.myshoppinglistapp.data.model.ShoppingList
-import com.example.myshoppinglistapp.presentation.BaseActivity
+import com.example.myshoppinglistapp.presentation.base.BaseActivity
 import com.example.myshoppinglistapp.presentation.archivedShoppingList.ArchivedShoppingListActivity
 import com.example.myshoppinglistapp.presentation.archivedShoppingList.adapterAddArchived.ArchivedAddShoppingListAdapter
 import kotlinx.android.synthetic.main.activity_archive_shopping_list.*

@@ -3,7 +3,7 @@ package com.example.myshoppinglistapp.presentation.addShoppingList
 import android.util.Log
 import com.example.myshoppinglistapp.data.model.ShoppingList
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
-import com.example.myshoppinglistapp.presentation.BasePresenter
+import com.example.myshoppinglistapp.presentation.base.BasePresenter
 import com.example.myshoppinglistapp.utils.SchedulerProvider
 import io.reactivex.rxkotlin.subscribeBy
 import java.time.LocalDate
@@ -23,7 +23,7 @@ class AddShoppingListPresenter @Inject constructor(
             .observeOn(scheduler.ui())
             .subscribeBy(
                 onComplete = { view.navigateToShoppingLists() },
-                onError = { Log.e("ERROR_ADD_SHOPPING_LIST", "Error adding shoppidang lists", it) }
+                onError = { Log.e("ERROR_ADD_SHOPPING_LIST", "Error adding shopping lists", it) }
             ).addToDisposables()
     }
 }

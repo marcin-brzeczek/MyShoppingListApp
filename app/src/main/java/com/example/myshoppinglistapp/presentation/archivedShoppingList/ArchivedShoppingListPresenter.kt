@@ -3,11 +3,10 @@ package com.example.myshoppinglistapp.presentation.archivedShoppingList
 import android.util.Log
 import com.example.myshoppinglistapp.data.model.ShoppingList
 import com.example.myshoppinglistapp.data.repository.ShoppingListRepository
-import com.example.myshoppinglistapp.presentation.BasePresenter
+import com.example.myshoppinglistapp.presentation.base.BasePresenter
 import com.example.myshoppinglistapp.utils.SchedulerProvider
 import io.reactivex.rxkotlin.subscribeBy
 import java.time.LocalDate
-import java.util.*
 import javax.inject.Inject
 
 class ArchivedShoppingListPresenter @Inject constructor(

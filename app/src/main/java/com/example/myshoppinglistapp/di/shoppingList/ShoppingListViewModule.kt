@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.di
+package com.example.myshoppinglistapp.di.shoppingList
 
 import com.example.myshoppinglistapp.presentation.current.CurrentListContract
 import com.example.myshoppinglistapp.presentation.shoppingListStale.ShoppingListActivity

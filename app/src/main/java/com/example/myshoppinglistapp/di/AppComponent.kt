@@ -2,6 +2,8 @@ package com.example.myshoppinglistapp.di
 
 import android.app.Application
 import com.example.myshoppinglistapp.InitApp
+import com.example.myshoppinglistapp.di.injectors.ActivityInjectorsModule
+import com.example.myshoppinglistapp.di.injectors.FragmentInjectorsModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule

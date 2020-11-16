@@ -24,4 +24,11 @@ class RoomModule {
     fun providesShoppingListDao(appDatabase: AppDatabase): ShoppingListDao =
         appDatabase.shoppingListDao()
 
+    @Singleton
+    @Provides
+    fun provideShoppingItemDao(appDatabase: AppDatabase): ShoppingItemDao =
+        appDatabase.shoppingItemDao()
+
+
+
 }

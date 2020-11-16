@@ -4,13 +4,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.LocalDate
 
-@Entity(tableName = "shoppingLists")
-data class ShoppingList(
+
+@Entity(tableName = "shoppingItems")
+data class ShoppingItem(
     @PrimaryKey(autoGenerate = true)
-    val shoppingListId: Long = 0,
+    val shoppingItemId: Long.Companion,
+    val shoppingListId: Long.Companion,
     val name: String,
     val date: LocalDate,
     val archived: Boolean = false
 )
-
-

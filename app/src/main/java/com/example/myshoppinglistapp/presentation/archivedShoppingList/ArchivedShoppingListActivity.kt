@@ -2,7 +2,7 @@ package com.example.myshoppinglistapp.presentation.archivedShoppingList
 
 import android.os.Bundle
 import com.example.myshoppinglistapp.R
-import com.example.myshoppinglistapp.presentation.BaseActivity
+import com.example.myshoppinglistapp.presentation.base.BaseActivity
 import kotlinx.android.synthetic.main.archive_shopping_list.*
 import javax.inject.Inject
 
